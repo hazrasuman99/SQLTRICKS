@@ -2,9 +2,9 @@ DECLARE @SearchStrTableName nvarchar(255), @SearchStrColumnName nvarchar(255), @
 SET @SearchStrColumnValue = '%a203165d-5b32-4dfb-aee4-%' /* use LIKE syntax */
 SET @FullRowResult = 1
 SET @FullRowResultRows = 3
-SET @SearchStrTableName = NULL /* NULL for all tables, uses LIKE syntax */
-SET @SearchStrColumnName = NULL /* NULL for all columns, uses LIKE syntax */
-SET @SearchStrInXML = 0 /* Searching XML data may be slow */
+SET @SearchStrTableName = NULL 
+SET @SearchStrColumnName = NULL 
+SET @SearchStrInXML = 0 
 
 IF OBJECT_ID('tempdb..#Results') IS NOT NULL DROP TABLE #Results
 CREATE TABLE #Results (TableName nvarchar(128), ColumnName nvarchar(128), ColumnValue nvarchar(max),ColumnType nvarchar(20))
